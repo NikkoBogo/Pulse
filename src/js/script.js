@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-    $('.carousel').slick({
+    $('.carousel-inner').slick({
         prevArrow: '<button type="button" class="slick-prev"><img src="icons/chevron-left.svg"></button>',
         nextArrow: '<button type="button" class="slick-prev"><img src="icons/chevron-right.svg"></button>',
         responsive: [
