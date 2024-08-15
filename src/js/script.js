@@ -11,6 +11,7 @@ $(document).ready(function(){
                 slidesToScroll: 1,
                 infinite: true,
                 dots: true,
+                focusOnSelect: true,
                 arrows: false
               }
             },]
@@ -49,4 +50,26 @@ $(document).ready(function(){
       }
       toggleSlide('.catalog-item__link');
       toggleSlide('.catalog-item__back');
+
+      //modal
+
+      $('[data-model=consultation]').on('click', function(){
+        $('.overlay, #consultation').fadeIn('fast');
+      });
+      $('.model__close').on('click', function(){
+        $('.overlay, #consultation, #thanks, #order').fadeOut('fast');
+      });
+      
+      $('.button--submit').on('click', function(){
+        $('#thanks').fadeIn('fast');
+        $('#consultation, #order').fadeOut('fast');
+      });
+      $('.button--small').each(function(i){
+        $(this).on('click', function(){
+          $('#order .model__description').text($('.catalog-item__subtitle').eq(i).text());
+          $('.overlay, #order').fadeIn('fast');
+        })
+      });
   });
+
+  
