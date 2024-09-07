@@ -110,6 +110,8 @@
             transform: translateX(0)
             transition: 0.5s all
             list-style-type: none
+            ul
+                padding-left: 0
             li
                 position: relative
                 color: rgb(85, 85, 85)
@@ -117,14 +119,14 @@
                 font-weight: 300
                 line-height: 21px
                 text-align: left
-                margin-bottom: 20px
+                margin-bottom: 10px
                 &:before
                     position: absolute
                     content: ''
                     width: 5px
                     height: 5px
                     background: $red_color
-                    left: -14px
+                    left: -18px
                     top: 8px
             &--active
                 transform: translateX(-100%)
